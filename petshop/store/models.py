@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 
 # Create your models here.
 class Product(models.Model):
@@ -23,6 +23,7 @@ class Order(models.Model):
     )
     complete = models.BooleanField(default=False)
     order_lines = models.ManyToManyField(Product, through="Orderline")
+    date = models.DateTimeField(default=timezone.now)
 
 
 class OrderLine(models.Model):
