@@ -1,5 +1,7 @@
+from typing import Any
 from django.db import models
 from django.utils import timezone
+
 
 # Create your models here.
 class Product(models.Model):
@@ -12,9 +14,9 @@ class Product(models.Model):
 
 class Order(models.Model):
     class OrderStatus(models.TextChoices):
-        PENDING = "PE"
-        APPROVED = "AP"
-        FULFILLED = "FU"
+        PENDING = "PE"  # pending shipping number
+        APPROVED = "AP"  # got shipping number
+        FULFILLED = "FU"  # shipping number is delivered
     
     status = models.CharField(
         max_length=2,

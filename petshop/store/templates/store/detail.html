@@ -1,0 +1,7 @@
+<form action="{% url 'store:order' product.id %}" method="post">
+    {% csrf_token %}
+    <p>{{ product.name }}</p>
+    <p> Avilable: {{ product.quantity }} </p>
+    <input type="number" name="quantity" min="0" max="{{ product.quantity }}"/>
+    <input type="submit" value="Order">
+    </form>
