@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="t1_0xWmCs1JD6vF-vjvd" name="Page-1">
+        <mxGraphModel dx="945" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="PetStoreFrontApp" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="SQL Database:&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;products&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;orders&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="460" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;" parent="1" source="5" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Customer" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;entryX=0.583;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="7" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="PetStore managers" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="shipping updates" style="edgeStyle=none;html=1;" parent="1" source="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="480" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Shipping Service" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="shipping updates" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
+                    <mxGeometry x="0.1045" y="7" relative="1" as="geometry">
+                        <mxPoint x="220" y="314" as="targetPoint"/>
+                        <mxPoint x="354" y="314" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="Message Queue&lt;br&gt;(RabbitMQ)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="355" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="queue: &quot;shipping&quot;&lt;br&gt;messages:&lt;br&gt;order-id&lt;br&gt;status" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="350" width="140" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="terminal program:&lt;br&gt;worker processing queue&lt;br&gt;call the app&amp;nbsp;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="350" width="140" height="160" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
