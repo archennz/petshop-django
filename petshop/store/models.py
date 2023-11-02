@@ -26,6 +26,7 @@ class Order(models.Model):
     complete = models.BooleanField(default=False)
     order_lines = models.ManyToManyField(Product, through="Orderline")
     date = models.DateTimeField(default=timezone.now)
+    shipping_number = models.IntegerField(blank=True, null=True, db_index=True)
 
 
 class OrderLine(models.Model):

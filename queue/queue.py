@@ -7,7 +7,6 @@ def send_message(headers, body):
     connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
     channel = connection.channel()
     channel.queue_declare(queue=QUEUE_NAME)
-
     channel.basic_publish(exchange='', routing_key=QUEUE_NAME, body=body)
     print(f" [x] Sent {body}")
     connection.close()

@@ -5,7 +5,20 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
+from rest_framework import viewsets
+from .serializers import ProductSerializer, OrderSerializer
+
 from .models import Product, Order, OrderLine
+
+
+class ProductView(viewsets.ModelViewSet):
+    serializer_class = ProductSerializer
+    queryset = Product.objects.all()
+
+
+class OrderView(viewsets.ModelViewSet):
+    serializer_class = OrderSerializer
+    queryset = Order.objects.all()
 
 
 class IndexView(generic.ListView):
@@ -24,4 +37,12 @@ def submitOrder(request, pk):
     order.save()
     order.order_lines.add(product, through_defaults={"quantity": request.POST["quantity"]})
     return HttpResponseRedirect(reverse("store:index"))
-    
+
+
+
+def completeOrder(request, pk):
+    order = get_object_or_404(Order, pk=pk)
+    order.shipping_number = request.POST["shipping_number"]
+    order.OrderStatus = Order.OrderStatus.FULFILLED
+
+

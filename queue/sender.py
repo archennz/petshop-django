@@ -11,4 +11,3 @@ data = {"order_id": sys.argv[1], "status": "DELIVERED"}
 event = CloudEvent(attributes, data)
 headers, body = to_structured(event)
 queue.send_message(headers, body)
-
