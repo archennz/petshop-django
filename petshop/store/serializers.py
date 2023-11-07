@@ -34,3 +34,6 @@ class OrderSerializer(serializers.ModelSerializer):
             product = Product.objects.get(pk=orderline['product']['id'])
             order.order_lines.add(product, through_defaults={'quantity': orderline['quantity']})
         return order
+
+class ShippingNumberSerializer(serializers.Serializer):
+    shipping_number = serializers.IntegerField()

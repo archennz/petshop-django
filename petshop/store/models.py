@@ -29,6 +29,11 @@ class Order(models.Model):
     shipping_number = models.IntegerField(blank=True, null=True, db_index=True)
 
 
+    def update_shipping(self, shipping_number):
+        self.shipping_number = shipping_number
+        self.status = Order.OrderStatus.FULFILLED.value
+
+        
 class OrderLine(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField()
